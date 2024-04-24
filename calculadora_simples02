@@ -1,0 +1,45 @@
+sair = 0
+
+print("| ---------------> Bem vindo a Calculadora Simples 2.0 <----------------- |")
+print("| ----------------------------------------------------------------------- |")
+print("| -> Soma = + | -> Subtração = - | -> Multiplicação = * | -> Divisão = /  | ")
+print("| -------------------- Dito isso podemos começar! ----------------------- |")
+print("| ----------------------------------------------------------------------- |")
+nome = input("| Qual seu nome ? Digite:")
+print(f"| {nome} certo, que nome bonito!")
+
+while sair == 0:
+    print("| ----------------------------------------------------------------------- |")
+    deseja_sair = input("| Sair? (S/N): ")
+
+    if deseja_sair == "n" or deseja_sair == "não":
+
+        x = int(input("| 1º número: "))
+        operador = input("| Operador ( + | - | * | / ): ")
+        if operador == "+" or operador == "mais":
+            y= int(input("| 2º número: "))
+            resultado = x + y
+            print(f"| {x} + {y} = {resultado}")
+
+        elif operador == "-" or operador == "menos":
+            y= int(input("| 2º número: "))
+            resultado = x - y
+            print(f"| {x} - {y} = {resultado}")
+
+        elif operador == "*" or operador == "multiplicar":
+            y= int(input("| 2º número: "))
+            resultado = x * y
+            print(f"| {x} * {y} = {resultado}")
+
+        elif operador == "/" or operador == "dividir":
+            y= int(input("| 2º número: "))
+            resultado = x / y
+            print(f"| {x} / {y} = {resultado}")
+                   
+        else:
+            print("| -- Infelizmenente o Operador Digitado não é valido, tente novamente --- |")
+    
+    elif deseja_sair == "s" or deseja_sair == "sim":
+        print("| ---------------- Calculadora Simples 2.0 encerrando :) ---------------- |")
+        print(f"| --------------------- Se cuide {nome}! ------------------------------- | ")
+        sair = 1
